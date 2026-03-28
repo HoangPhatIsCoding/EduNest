@@ -182,7 +182,8 @@ export function TutorDetailPage() {
                 <span className="text-[#2F80ED]" style={{ fontSize: "1.75rem", fontWeight: 700 }}>
                   {tutor.price.toLocaleString("vi-VN")}đ
                 </span>
-                <span className="text-gray-400" style={{ fontSize: "0.875rem" }}> /giờ</span>
+                <span className="text-gray-400" style={{ fontSize: "0.875rem" }}> /khóa</span>
+                <span className="text-gray-500 block" style={{ fontSize: "0.875rem", fontStyle: "italic" }}>(gồm 20 giờ học)</span>
               </div>
 
               <div className="space-y-4 mb-6">

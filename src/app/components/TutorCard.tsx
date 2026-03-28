@@ -64,7 +64,7 @@ export function TutorCard({ tutor }: TutorCardProps) {
             <span className="text-[#2F80ED]" style={{ fontSize: "1.125rem", fontWeight: 600 }}>
               {tutor.price.toLocaleString("vi-VN")}đ
             </span>
-            <span className="text-gray-400" style={{ fontSize: "0.75rem" }}> /giờ</span>
+            <span className="text-gray-400" style={{ fontSize: "0.75rem" }}> /khóa</span>
           </div>
           <Link
             to={`/tutors/${tutor.id}`}
