@@ -4,6 +4,11 @@ import { LandingPage } from "./components/LandingPage";
 import { TutorListingPage } from "./components/TutorListingPage";
 import { TutorDetailPage } from "./components/TutorDetailPage";
 import { DashboardPage } from "./components/DashboardPage";
+import { DashboardOverviewPage } from "./components/DashboardOverviewPage";
+import { DashboardSchedulePage } from "./components/DashboardSchedulePage";
+import { DashboardSavedPage } from "./components/DashboardSavedPage";
+import { DashboardMessagesPage } from "./components/DashboardMessagesPage";
+import { DashboardProfilePage } from "./components/DashboardProfilePage";
 import { ChatPage } from "./components/ChatPage";
 import { BecomeTutorPage } from "./components/BecomeTutorPage";
 import { LoginPage } from "./components/LoginPage";
@@ -40,7 +45,17 @@ export const router = createBrowserRouter([
   { path: "/login", Component: LoginPage },
   { path: "/register", Component: RegisterPage },
   // Parent routes
-  { path: "/dashboard", Component: DashboardPage },
+  {
+    path: "/dashboard",
+    Component: DashboardPage,
+    children: [
+      { index: true, Component: DashboardOverviewPage },
+      { path: "schedule", Component: DashboardSchedulePage },
+      { path: "saved", Component: DashboardSavedPage },
+      { path: "messages", Component: DashboardMessagesPage },
+      { path: "profile", Component: DashboardProfilePage },
+    ],
+  },
   { path: "/dashboard/manage", Component: ParentManagementPage },
   { path: "/chat", Component: ChatPage },
   // Tutor routes
